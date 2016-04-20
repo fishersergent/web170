@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <!-- Begin Meta -->
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0" />
+<!-- End Meta -->
+<title>Westwood Design</title>
+    <link href="css/styles1.css" rel="stylesheet" type="text/css" />
+    <link href="css/media.css" rel="stylesheet" type="text/css" />
+    <link href='https://fonts.googleapis.com/css?family=Overlock:400,700' rel='stylesheet' type='text/css'>
+    <link href="css/blueberry.css" type="text/css" rel="stylesheet">
+        
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js">//find jQuery library</script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
+<script src="js/jquery.blueberry.js"></script>
+    
+    <script>
+$(window).load(function() {
+	$('.blueberry').blueberry();
+});
+
+</script>
+</head>
+<body>
+    <div id="header">
+         <div id="logo">
+                 <a href="main.html"><img class="logo" src="images/logo.png" alt="logo"></a>
+            </div><!--end #logo-->
+        
+        <div id="nav" role="navigation">
+            
+    <a href="#nav" title="Show navigation"><img class="mobilenav" src="images/menu.png" alt="menu"></a>
+    <a href="#" title="Hide navigation"><img class="mobilenav" src="images/closemenu.png" alt="closemenu"></a>
+            
+    <ul>
+        <li>
+        <a class="index" href="main.html" aria-haspopup="true">Home</a>
+            </li>
+        
+        <li>
+            <a class="main" href="about.php" aria-haspopup="true">About</a>
+            <ul>
+                <li class="drop"><a href="employeebio.php">Employee Bios</a></li>
+                <li class="drop"><a href="conservation.php">Conservation Work</a></li>
+            </ul>
+        </li>
+        
+        <li>
+            <a class="main" href="portfolio.html" aria-haspopup="true">Portfolio</a>
+            <ul>
+                <li class="drop"><a href="designjob1.php">Example Job Garden </a></li>
+                <li class="drop"><a href="job2.php">Example Job Water Feature</a></li>
+                <li class="drop"><a href="job3.php">Example Job Rock Wall</a></li>
+                <li class="drop"><a href="job4.php">Example Job Installation</a></li>
+            </ul>
+        </li>
+        <li>
+            <a class="main" href="services.php" aria-haspopup="true">Services</a>
+            <ul>
+                <li class="drop"><a href="design.php">Landscape Design</a></li>
+                <li class="drop"><a href="install.php">Installation</a></li>
+                <li class="drop"><a href="maintenance.php">Maintenance</a></li>
+            </ul>
+        </li>
+        <li><a class="main" href="contact.php">Contact</a></li>
+    </ul>
+</div><!--end #nav-->
+    
+</div><!--end #header-->
+    <!--<div id="hero">-->
+     <!-- start blueberry -->
+
+    <div class="blueberry">
+      <ul class="slides">
+          <li><img src="images/banner1.jpg" alt="garden1" /></li>
+          <li><img src="images/banner2.jpg" alt="garden2" /></li>
+          <li><img src="images/banner3.jpg" alt="garden3" /></li>
+          <li><img src="images/banner4.jpg" alt="garden4" /></li>
+	
+      </ul>
+     </div><!-- end blueberry -->
+       <!--  </div><!-- end #hero-->
+    
+    
+<!---------#cta1---------->
+    
+    <div id="cta1">
+        <a href="design.php">
+        <ul>
+            <li><h2>Westwood Design &amp; Landscaping</h2></li>
+            <li>Beautiful design for the way you live</li>
+        </ul>
+            </a>
+    </div><!--end #cta1-->
+   
+<!--------------#CTAs-------------->
+
+    <div id="cta2">
+        <a href="design.php">
+        <ul class="test">
+         <li><img class="icon" src="images/design.png"></li>
+        <li><h2>Design</h2></li>
+        </ul>
+        </a>
+</div><!--end #cta2-->
+
+ <div id="cta3">
+     <a href="maintenance.php">
+        <ul class="test">
+         <li><img class="icon" src="images/gear.png"></li>
+        <li><h2>Maintenance</h2></li>
+        </ul>
+     </a>
+</div><!--end #cta3-->
+
+ <div id="cta4">
+     <a href="restoration.php">
+        <ul class="test">
+         <li><img class="icon" src="images/leaf.png"></li>
+        <li><h2>Restoration</h2></li>
+        </ul>
+     </a>
+</div><!--end #cta4-->
+
+<!--------------end #CTAs-------------->
+
+
+<div id="footer">
+        
+        <div id="contactinfo">
+       <ul>
+        <li><p>(360)-555-1234</p></li>
+        <li><p>employee@westwooddesign.com</p></li>
+            </ul>
+        </div><!--end contact info-->
+        
+        
+        <div id="social">
+            <ul>
+        <a href=""><li><img src="images/pinterest.png" alt="pinterest"></li></a>
+        <a href=""><li><img src="images/facebook.png" alt="facebook"></li></a>
+        <a href=""><li><img src="images/instagram.png" alt="instagram"></li></a>
+                </ul>
+        </div><!--end social-->
+        
+        <div id="copy">
+            <ul>
+        <li>&copy;2016 Rosie Fisher-Sergent</li>
+                </ul>
+            </div><!--end copy-->
+            
+            
+    </div><!--end #footer-->
+
+<script src="js/doubletaptogo.js"></script>
+    
+    <script>
+    $( function()
+	{
+		$( '#nav li:has(ul)' ).doubleTapToGo();
+	});
+    
+    </script>
+<!------this----->
+<!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>-->
+
+<script src="js/jquery-ui.js"></script>
+<script src="js/accordian.js"></script>
+</body>
+
+</html>
