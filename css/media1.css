@@ -1,0 +1,475 @@
+@media screen and (min-width: 1200px) {
+
+    
+     #nav > ul {
+
+        height: 3.75em;
+        text-decoration:none;
+    }
+    
+    #mobile-nav {
+        display:none;
+    }
+
+    #mobile-nav-ul{
+        display:none;
+    }
+    
+    #cta1 {
+     width:40%;   
+    }
+}
+
+@media screen and (max-width: 1000px) {
+
+     #nav > ul
+    {
+        height: 3.75em;
+        text-decoration:none;
+
+    }
+
+    li a.index {
+        display:none;
+    }
+    
+    #logo img.logo {
+        max-width:90%;
+    }
+    
+    #cta1 {
+     width:55%;   
+    }
+
+
+/*---footer---*/
+    #social {
+    margin:2% 1% 1% 14%;
+    float:left;
+    display:inline;
+    line-height:2em;
+}
+
+#copy {
+    margin:4% 1% 1% 14%;
+    float:left;
+    display:block;
+}
+
+}
+
+/*--mobile nav here--*/
+
+@media screen and (max-width: 900px) {
+
+    li a.index {
+        display:block;   
+    }
+    
+    #nav {
+        margin-left:0%;
+        width:100%;
+        position: relative;
+        z-index: 10;
+    }
+    
+        #nav > a
+        {
+        
+        }
+        #nav:not( :target ) > a:first-of-type,
+        #nav:target > a:last-of-type
+        {
+            display: block;
+        }
+ 
+    /* first level */
+ 
+    #nav > ul
+    {
+        margin-left:0%;
+        height: auto;
+        display: none;
+        position: absolute;
+        left: 0;
+        right: 0;
+        width:100%;
+    }
+    
+        #nav:target > ul
+        {
+            display: block;
+        }
+        #nav > ul > li
+        {
+            text-align:left;
+            background:#d7f4eb;
+            width: 100%;
+            float: none;
+        }
+ 
+    /* second level */
+ 
+    #nav li ul
+    {
+        position: static;
+    }
+
+    img.logo {
+        margin: 31% 0%;
+        z-index:10;
+        display:block;
+    }
+    
+    img.logo-sm {
+        display:none;
+    }
+    
+   img.mobilenav{
+       margin-top:2.5%;
+       margin-left:2.5%;
+   }
+    
+    #cta1 {
+     display:none;   
+    }
+    
+    /*------about-----*/
+
+#about {
+    float:left;
+    margin-bottom:1%;
+    margin-right:2.127659%;
+    margin-left:2.127659%;
+    }
+    
+#conservation {
+	float:left;
+    margin-left:2%;
+    width:100%;
+
+	}
+    
+#video1 {
+    float:left;
+    width:100%;
+}
+    
+    #video2 {
+    float:left;
+    width:100%;
+}
+    
+iframe {
+    margin-top:1%;
+   margin-bottom:1%;
+
+}
+
+/*---footer---*/
+    #social {
+    margin:2% 1% 1% 10%;
+    float:left;
+    display:inline;
+    line-height:2em;
+}
+
+    #social ul{
+    float:left;
+    display:inline;
+    line-height:3em;
+}
+
+#copy {
+    margin:2% 1% 1% 10%;
+    float:left;
+    display:block;
+}
+    
+    #copy ul {
+    float:left;
+    display:inline;
+    line-height:4em;
+}
+    
+    /*------#services-----*/
+    
+    #aside {  
+        float:none; 
+    }
+}
+	
+
+@media screen and (max-width: 800px) {
+
+    
+    /*------about-----*/
+
+#about {
+    width:70%;
+    }
+
+#team {
+    
+}
+
+    /*-----FOOTER-----*/
+
+#footer {
+    margin-top:22%;
+    clear:both;
+    height:80px;
+    width:100%;
+}
+
+#contactinfo {
+    float:left;
+    display:inline;
+    margin:1% 1%;
+    line-height:1em;
+}
+
+#contactinfo ul {
+    text-align:center;
+    margin-top:1em; 
+}
+
+    #social {
+    margin:1% 1% 1% 3%;
+    float:left;
+    display:inline;
+    line-height:1em;
+}
+    
+    
+#social ul{
+    float:left;
+    display:inline;
+    line-height:1em;
+}
+
+
+#copy {
+    margin:2% 1% 1% 7%;
+    float:left;
+    display:block;
+}
+
+#copy ul {
+    float:left;
+    display:inline;
+    line-height:3em;
+}
+
+
+    
+/*--------portfolio---------*/
+      #box1 {
+    width:100%; 
+      }
+
+
+    #box2 {
+        width:100%;
+        float:left;
+    }
+
+
+    #box3 {
+    width:100%;
+    }
+    
+    #box4 {
+        width:100%;
+        float:left;
+    }
+
+    #box5 {
+    width:100%;
+    }
+
+
+    #box6 {
+    width:100%;
+    float:left;
+    }
+    
+}
+
+
+@media screen and (max-width: 750px) {
+
+     #nav
+    {
+        
+        margin-left:0%;
+        width:100%;
+        position: relative;
+        z-index: 10;
+    }
+        #nav > a
+        {
+        
+        }
+        #nav:not( :target ) > a:first-of-type,
+        #nav:target > a:last-of-type
+        {
+            display: block;
+        }
+ 
+    /* first level */
+ 
+    
+    #nav > ul
+    {
+        margin-left:0%;
+        height: auto;
+        display: none;
+        position: absolute;
+        left: 0;
+        right: 0;
+        width:100%;
+    }
+    
+        #nav:target > ul
+        {
+            display: block;
+        }
+        #nav > ul > li
+        {
+            text-align:left;
+            background:#d7f4eb;
+            float: none;
+        }
+ 
+    /* second level */
+ 
+    #nav li ul
+    {
+        max-width:50%;
+        position: static;
+    }
+    
+    
+    img.logo {
+        width:50%;   
+    }
+    
+    #about {
+        width:100%;
+    }
+    
+
+    
+    
+    
+    /*------test------*/
+
+#test {
+
+    float:none;
+    width:95.74468%;
+    margin-right:2.127659%;
+    margin-left:2.127659%;
+    margin-top:2.127659%;
+    position:relative;
+    text-align:center;
+}
+    
+#test img {
+    width:30%;
+    margin-top:2.127659%;
+}
+
+#test li {
+   text-decoration:none;
+    list-style-type:none;
+}
+    #test1 {
+
+    float:none;
+    width:95.74468%;
+    margin-right:2.127659%;
+    margin-left:2.127659%;
+    margin-top:2.127659%;
+    position:relative;
+    text-align:center;
+}
+    
+    #test1 img {
+    width:30%;
+    margin-top:2.127659%;
+}
+    
+    #test2 {
+
+    float:none;
+    width:95.74468%;
+    margin-right:2.127659%;
+    margin-left:2.127659%;
+    margin-top:2.127659%;
+    position:relative;
+    text-align:center;
+}
+    
+    #test2 img {
+    width:30%;
+    margin-top:2.127659%;
+}
+    
+       /*------about-----*/
+
+#about {
+    width:80%;
+    }
+    
+    
+    /*-----FOOTER-----*/
+
+#footer {
+    clear:both;
+
+    height:125px;
+    width:100%;
+}
+
+#contactinfo {
+    float:left;
+    line-height:1em;
+}
+
+#contactinfo ul {
+    margin-top:0px; 
+    
+}
+
+    #contactinfo li {
+       
+    }
+
+    #social {
+    display:inline;
+    line-height:1em;
+}
+    
+#social ul{
+    display:inline;
+    line-height:1em;
+}
+
+
+#copy {
+    display:block;
+}
+
+#copy ul {
+    float:left;
+    display:inline;
+    line-height:1em;
+    text-align:left;
+}
+}
+
+@-ms-viewport {
+    width:device-width;
+	}
