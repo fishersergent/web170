@@ -31,57 +31,14 @@ $(window).load(function() {
     
 </head>
 <body <?php body_class();?>>
-    <!--<div id="header">
+    <div id="header">
          <div id="logo">
                  <a href="main.html"><img class="logo" src="<?php bloginfo('template_directory'); ?>/images/logo.png" alt="logo"></a>
             </div><!--end #logo-->
         
         
-            <?php wp_nav_menu( array( 'theme_location' => 'main', 'container' => 'div', 'container_id' => 'nav', 'items_wrap' => '<ul id="navigation-items"></ul>' )); ?>
+<?php wp_nav_menu( array( 'theme_location' => 'main-menu', 'container' => 'div', 'container_id' => 'nav', )); ?>
        
-    
-    <!--
-<div id="nav" role="navigation">
-<a href="#nav" title="Show navigation"><img class="mobilenav" src="images/menu.png" alt="menu"></a>
-    <a href="#" title="Hide navigation"><img class="mobilenav" src="images/closemenu.png" alt="closemenu"></a>
-            
-    <ul id="navigation-items">
-        <li>
-        <a class="index" href="main.html" aria-haspopup="true">Home</a>
-            </li>
-        
-        <li>
-            <a class="main" href="about.php" aria-haspopup="true">About</a>
-            <ul>
-                <li class="drop"><a href="employeebio.php">Employee Bios</a></li>
-                <li class="drop"><a href="conservation.php">Conservation Work</a></li>
-            </ul>
-        </li>
-        
-        <li>
-            <a class="main" href="portfolio.html" aria-haspopup="true">Portfolio</a>
-            <ul>
-                <li class="drop"><a href="designjob1.php">Example Job Garden </a></li>
-                <li class="drop"><a href="job2.php">Example Job Water Feature</a></li>
-                <li class="drop"><a href="job3.php">Example Job Rock Wall</a></li>
-                <li class="drop"><a href="job4.php">Example Job Installation</a></li>
-            </ul>
-        </li>
-        <li>
-            <a class="main" href="services.php" aria-haspopup="true">Services</a>
-            <ul>
-                <li class="drop"><a href="design.php">Landscape Design</a></li>
-                <li class="drop"><a href="install.php">Installation</a></li>
-                <li class="drop"><a href="maintenance.php">Maintenance</a></li>
-            </ul>
-        </li>
-        <li><a class="main" href="contact.php">Contact</a></li>
-    </ul>-->
-<!--</div><!--end #nav-->
-    
-<!--</div><!--end #header-->
-    <!--<div id="hero">-->
-     <!-- start blueberry -->
 
     <div class="blueberry">
       <ul class="slides">
@@ -92,10 +49,7 @@ $(window).load(function() {
 	
       </ul>
      </div><!-- end blueberry -->
-       <!--  </div><!-- end #hero-->
-    
 
-    
 <!---------#cta1---------->
     
     <div id="cta1">
@@ -109,18 +63,42 @@ $(window).load(function() {
     </div><!--end #cta1-->
 
 <!------#content------>
-    
-    <div id="content">
-     <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); //start the loop ?>
-        <h2><a href="<?php the_permalink(); //link to the page or posting ?>"><?php the_title(); //get the page or posting title ?></a></h2>
-      <?php the_content(''); //get the page or posting written content ?>
-      <?php endwhile; endif; //end the loop ?>
-    </div><!--end #content-->
+        <div id="content">
+        <?php if (have_posts()) : while (have_posts()) : the_post();?>
+        
+            <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+            
+            <h2><?php the_category( '&bull;' ); ?></h2>
+            
+            <?php the_content(); ?>
+            
+        <?php endwhile;?>
+        <?php endif; ?>
+            </div>
     
 <!-------end #content------>
 
+
 <!------#sidebar------>
     <div id="sidebar">
+        <h2><?php echo get_the_title($post->post_parent); ?></h2><!--...get the gateway page title-->
+        <ul><?php    
+            if($post->post_parent) {//if the page we're on has a parent
+                    wp_list_pages(array('child_of' => '', 'title_li' => __(''))); //list the sub-pages with no title
+            }else{//if the page does not have a parent
+                    wp_list_pages(array('child_of' => $post->ID, 'title_li' => __(''))); //list the sub-pages with not title
+                }
+            ?></ul>
+        </div><!--end #sidebar-->
+
+<!------end #sidebar----->
+
+
+   
+<!--------------#CTAs-------------->
+
+ <!------#cta2------>
+    <div id="cta2">
         <h2><?php echo get_the_title($post->post_parent); ?></h2>
         <?php    
             if($post->post_parent) {//if the page we're on has a parent
@@ -130,48 +108,27 @@ $(window).load(function() {
                     wp_list_pages(array('title_li' => '', 'child_of', $post->ID,)); 
                 }
 ?>
-    </div><!--end #sidebar--->
+        <h2>Posts</h2>
+        <?php if ( have_posts() ) : while( have_posts() ) : the_post(); // start loop one ?>
+<?php the_content(''); // get the home page's content ?>
+<?php endwhile; endif; // end loop one ?>
+        
 
-<!------end #sidebar----->
-
-
-
-<!------#sidebar2------>
-    <div id="sidebar">
-        <h2 class="sub-navigation-title"><?php echo get_the_title($post->post_parent); //...get the gateway page title?></h2>
-        <ul class="sub-navigation-items"><?php    
-            if($post->post_parent) {//if the page we're on has a parent
-      
-                    wp_list_pages(array('child_of' => '', 'title_li' => __(''))); //list the sub-pages with no title
-            }else{//if the page does not have a parent
-                    wp_list_pages(array('child_of' => $post->ID, 'title_li' => __(''))); //list the sub-pages with not title
-                }
-            ?></ul>
-    </div><!--end #sidebar2--->
-
-<!------end #sidebar2----->
-
-
-   
-<!--------------#CTAs-------------->
-
-    <div id="cta2">
-        <a href="design.php">
-        <ul class="test">
-         <li><img class="icon" src="<?php bloginfo('template_directory') ?>/images/design.png"></li>
-        <li><h2>Design</h2></li>
-        </ul>
-        </a>
-</div><!--end #cta2-->
+    </div><!--end #cta2-->
 
  <div id="cta3">
-     <a href="maintenance.php">
-        <ul class="test">
-         <li><img class="icon" src="<?php bloginfo('template_directory') ?>/images/gear.png"></li>
-        <li><h2>Maintenance</h2></li>
-        </ul>
-     </a>
+     
+     <h2>Latest Posts:</h2>
+         <ul>
+        <?php rewind_posts(); // stop loop one ?>
+<?php query_posts('showposts=4'); // give directions to loop two ?>
+<?php while (have_posts()) : the_post(); // start loop two ?>
+             <li><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></li>
+             
+<?php endwhile; // end loop two ?>
+         </ul>
 </div><!--end #cta3-->
+    
 
  <div id="cta4">
      <a href="restoration.php">
