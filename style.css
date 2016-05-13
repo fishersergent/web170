@@ -11,17 +11,9 @@ Version: 1.0
     margin:0;
 }
 
-#header {
-   
-}
-
 h1, h2, h3, h4 {
     font-family: 'Overlock', cursive;
     color:#6f2a2c;
-}
-
-h2.portfolio {
-   margin-top:3%; 
 }
 
 h2.content {
@@ -42,27 +34,7 @@ p {
     line-height:1.5em; 
     font-size:1em;
  }
-a.main {
-    text-decoration:none;
-}
 
-a.index {
-    text-decoration:none;
-}
-
-
-li a.index-sm {
-text-decoration:none;   
-}
-
-
-li a.index {
- display:none;   
-}
-
-nav.current {
-    background:#000;
-}
 
 #nav
 {
@@ -75,7 +47,7 @@ nav.current {
     width:100%;
     max-width:100%;
     text-decoration:none;
-    margin-left:15%;
+
      
 }
     #nav > a
@@ -89,6 +61,11 @@ nav.current {
     color:#6f2a2c;
 }
 
+#nav ul.menu li:hover{
+    background:#69f7ca;
+}
+
+
 #nav a.index-sm {
     color:#6f2a2c;
 }
@@ -101,21 +78,40 @@ nav.current {
         
     }
 
+    #nav li a {
+        text-decoration:  none;
+        color:#6f2a2c;
+    }
+
+     #nav li a:hover {
+        text-decoration:  none;
+        color:#000;
+    }
+
     #nav li.drop {
         width:100%;
     }
  
     /* first level */
  
-    #nav > ul
+    #nav > ul.menu
+    {
+        height: 3.75em;
+        text-decoration:none;
+        margin-left:26%;
+       
+    }
+
+    #nav ul.menu-main
     {
         height: 3.75em;
         text-decoration:none;
        
     }
+
         #nav > ul > li
         {
-            width: 15%;
+            width: 16%;
             height: 100%;
             float: left;
             z-index:6;
@@ -124,7 +120,8 @@ nav.current {
             text-decoration:none;
             text-align:center;
         }
- 
+
+
     /* second level */
  
     #nav li ul
@@ -148,17 +145,18 @@ nav.current {
             line-height:3em;
         }
 
-#nav ul li ul.children {
-display: none;
-}
 
-
-#nav ul li.current_page_item {
-    color: #6f2a2c;
+#nav ul.menu li.current_page_item {
+    color: #fff;
     text-decoration:none;
 }
 
-#nav li.drop a:hover
+#nav ul.menu li.current_menu_item {
+    color: #fff;
+    text-decoration:none;
+}
+
+#nav ul.sub-menu li a:hover
         {
             display: block;
             width:100%;
@@ -206,6 +204,15 @@ body {
     z-index:5;  
 }
 
+#logohome {
+    margin-top:2%;
+    position:absolute;
+    left:0;
+    top:0;
+    float:left;
+    z-index:7;
+}
+
 #hero {
     max-width:100%;
     margin-left: 2.127659%;
@@ -224,13 +231,18 @@ body {
     margin-right:2.127659%;
 }
 
+#content-title {
+    display: block;
+}
+
 #content h1, h2, h3,h4 {
     margin: 2.127659%;  
+    display:inline;
 }
 
 #content p {
-    margin-left: 4%; 
-    margin-right: 4%;
+    margin-left: 6%; 
+    margin-right: 6%;
 }
 
 #content ol {
@@ -251,18 +263,24 @@ body {
 }
 /*-------end #content------*/
 
+
+
 /*-------#sidebar------*/
 
 #sidebar {
     width:31.914893%;
     float:left;
-    background:blue;
-    /*background:rgba(255, 249, 208, 0.8);*/
-
+    background:rgba(255, 249, 208, 0.8);
     margin-top:2.127659%;
     margin-bottom:2.127659%;
-
 }
+
+#sidebar ul {
+    margin-bottom:10%;
+}
+#sidebar ul li {
+    margin-left:10%;
+}   
 
 
 /*-------end #sidebar------*/
@@ -275,11 +293,11 @@ body {
     left:0;
     top:0;
     margin-right:25%;
-    margin-left:23%;
-    margin-top:40%;
+    margin-left:26%;
+    margin-top:25%;
     background:rgba(255, 249, 208, 0.8);
     width:47%;
-    height:13%; 
+    height:19%; 
     clear:both;
     border-radius: 15px;
     text-align:center;
@@ -301,7 +319,8 @@ body {
 
 #cta1:hover{
     background:#fff9d0;
-    font-color:#000;
+    color:#000;
+    
 }
 
 #cta1 a:hover{
@@ -331,8 +350,37 @@ body {
 }
 
 #cta2 li {
-   text-decoration:none;
+    text-decoration:none;
     list-style-type:none;
+    text-align:left;
+}
+
+#cta2 ol {
+    margin-left:2.127659%; 
+}
+
+#cta2 ul {
+    margin-left:2.127659%; 
+}
+
+#cta2 h1, h2, h3, h4 {
+    text-align:left;
+    margin-left:2.127659%; 
+}
+
+#cta2 form {
+     text-align:left;
+    margin-left:2.127659%; 
+}
+
+#cta2 p {
+    text-align:left;
+    margin:2.127659%;
+}
+
+#cta2 blockquote {
+    text-align:left;
+    margin:2.127659%;
 }
 
 #cta3 {
@@ -347,11 +395,19 @@ body {
 #cta3 img {
     width:50%;
     margin-top:2.127659%;
+    max-width:100%;
+}
+#cta3 h1, h2, h3, h4, {
+    text-align:left;
 }
 
 #cta3 li {
    text-decoration:none;
-    list-style-type:none;
+    text-align:left;
+}
+
+#cta3 p {
+    text-align:left;
 }
 
 #cta4 {
@@ -360,16 +416,23 @@ body {
     width:31.914893%;
     text-align:center;
     position:relative;
+    text-align:left;
 }
 
 #cta4 img {
     width:50%;
     margin-top:2.127659%;
+    max-width:100%;
 }
 
 #cta4 li {
    text-decoration:none;
     list-style-type:none;
+    text-align:left;
+}
+
+#cta4 p {
+   text-align:left; 
 }
 
 
@@ -522,6 +585,8 @@ body {
 p.portfolio {
     margin-right:1%;
 }
+
+
 /*--------Employee Bio Page-------*/
 
 #box1 img {
