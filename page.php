@@ -1,14 +1,12 @@
-<?php get_header(); ?>   
-
+<?php get_header(); ?>
 
 <!------#content------>
         <div id="content">
-            
         <?php if (have_posts()) : while (have_posts()) : the_post();?>
         
-            <h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
+            <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
             
-            <h4>Posted In: <?php the_category( ' &bull; ' ); ?></h4>
+            <h2><?php the_category( '&bull;' ); ?></h2>
             
             <?php the_content(); ?>
             
@@ -17,18 +15,17 @@
             </div>
 <!-------end #content------>
 
+
 <?php get_sidebar(); ?>
 
-<small>index.php</small>
+<small>page.php</small>
 <!--------------#CTAs-------------->
 
  <!------#cta2------>
     <div id="cta2">
-        <?php if ( have_posts() ) : while( have_posts() ) : the_post(); ?><!--start loop one -->
+       <?php if ( have_posts() ) : while( have_posts() ) : the_post(); ?><!--start loop one -->
         <?php the_content(''); ?><!--get the home page content -->
         <?php endwhile; endif; ?><!--end loop one-->
-        
-
     </div><!--end #cta2-->
 
 <!-------#cta3------->
