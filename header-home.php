@@ -7,15 +7,14 @@
 <!-- End Meta -->
 <title><?php bloginfo('description'); ?></title>
     <link href="css/style.css" rel="stylesheet" type="text/css" />
-    
-    <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/media.css"  type="text/css" media="all" />
+    <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/media.css"  type="text/css" />
     <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>" type="text/css" media="all" />
  
     
     <link href='https://fonts.googleapis.com/css?family=Overlock:400,700' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/blueberry.css" type="text/css" />
         
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script><!--find jQuery library-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js">//find jQuery library</script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
 <script src="<?php bloginfo ('template_directory'); ?>/js/jquery.blueberry.js"></script>
     
@@ -36,7 +35,7 @@ $(window).load(function() {
     <div id="header">
          <div id="logo">
                  <a href="<?php echo get_settings('home'); ?>"><!--this link needs to be fixed-->
-                     <img class="logo" src="<?php bloginfo('template_directory'); ?>/images/logo-sm.png" alt="logo"></a>
+                     <img class="logohome" src="<?php bloginfo('template_directory'); ?>/images/logo.png" alt="logo"></a>
             </div><!--end #logo-->
         
         

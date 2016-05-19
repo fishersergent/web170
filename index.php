@@ -5,30 +5,31 @@
         <div id="content">
             
         <?php if (have_posts()) : while (have_posts()) : the_post();?>
+            
+            <article class="post-excerpt">
         
-            <h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
-            
+            <h1><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h1>
             <h4>Posted In: <?php the_category( ' &bull; ' ); ?></h4>
-            
-            <?php the_content(); ?>
+            <h5>Posted on <?php the_time('F j, Y'); ?> by <?php the_author(); ?> </h5>
+            <a href="<?php the_permalink()?>"><?php the_post_thumbnail('thumbnail'); ?></a>
+            <?php the_excerpt(); ?>
+            </article>
             
         <?php endwhile;?>
         <?php endif; ?>
             </div>
 <!-------end #content------>
 
-<?php get_sidebar(); ?>
+<?php get_sidebar('blog'); ?>
 
 <small>index.php</small>
 <!--------------#CTAs-------------->
 
  <!------#cta2------>
-    <div id="cta2">
-        <?php if ( have_posts() ) : while( have_posts() ) : the_post(); ?><!--start loop one -->
-        <?php the_content(''); ?><!--get the home page content -->
-        <?php endwhile; endif; ?><!--end loop one-->
-        
-
+<div id="cta2">
+ <h3>Title</h3>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus vestibulum enim eget pulvinar laoreet. Fusce vel neque purus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque id tortor nibh. Cras egestas risus sed tempor auctor. Sed ullamcorper convallis purus eget ultricies. Vestibulum rhoncus orci diam, et congue magna iaculis eget. Vestibulum blandit ornare finibus.</p>
+    
     </div><!--end #cta2-->
 
 <!-------#cta3------->
