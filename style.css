@@ -11,9 +11,10 @@ Version: 1.0
     margin:0;
 }
 
-h1, h2, h3, h4 {
+h1, h2, h3, h4, h5, h6 {
     font-family: 'Overlock', cursive;
     color:#6f2a2c;
+
 }
 
 h2.content {
@@ -205,7 +206,7 @@ body {
 }
 
 #logohome {
-    margin-top:2%;
+
     position:absolute;
     left:0;
     top:0;
@@ -224,8 +225,7 @@ body {
 #content {
     width:65.957446%;
     float:left;
-    background:red;
-   /* background:rgba(255, 249, 208, 0.8);*/
+    background:rgba(255, 249, 208, 0.8);
     margin-top:2.127659%;
     margin-bottom:2.127659%;
     margin-right:2.127659%;
@@ -235,9 +235,8 @@ body {
     display: block;
 }
 
-#content h1, h2, h3,h4 {
+#content h1, h2, h3,h4,h5, h6 {
     margin: 2.127659%;  
-    display:inline;
 }
 
 #content p {
@@ -282,8 +281,56 @@ body {
     margin-left:10%;
 }   
 
+#quote blockquote {
+    color:#000;
+    background:rgba(23, 234, 123, 0.5);
+    border-left:10px solid yellow;
+    quotes: "\201C""\201D""\2018""\2019";
+}
+
+#quote blockquote:before {
+    content: open-quote;
+    font-size:5em;
+}
 
 /*-------end #sidebar------*/
+
+
+/*-------#sidebar-blog------*//*------FIX THIS-------*/
+
+#sidebar-blog {
+    width:31.914893%;
+    float:left;
+    background:red;
+    /*background:rgba(255, 249, 208, 0.8);*/
+    margin-top:2.127659%;
+    margin-bottom:2.127659%;
+}
+
+#sidebar-blog ul {
+    margin-bottom:10%;
+}
+#sidebar-blog ul li.cat-item, #sidebar-blog ul li.cat-item  {
+    margin-left:10%;
+}   
+
+
+
+/*-------end #sidebar-blog------*/
+
+/*-------blog thumbnails------*/
+#content img.attachment-thumbnail,
+#content img.size-thumbnail {
+    float:left;
+    margin:0 20px 10px 20px;
+     
+}
+
+article.post-excerpt {
+    overflow:hidden;
+    margin-bottom:20px;
+}
+/*-------end blog thumbnails-------*/
 
 
 /*-----CTA 1 Banner Button-----*/
@@ -363,7 +410,7 @@ body {
     margin-left:2.127659%; 
 }
 
-#cta2 h1, h2, h3, h4 {
+#cta2 h1, h2, h3, h4, h5, h6 {
     text-align:left;
     margin-left:2.127659%; 
 }
