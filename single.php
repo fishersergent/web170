@@ -6,8 +6,10 @@
         
             <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
             
-            <h2><?php the_category( '&bull;' ); ?></h2>
+            <h2><?php the_category( ' &bull; ' ); ?></h2>
+             <h5>Posted on <?php the_time('F j, Y'); ?> by <?php the_author(); ?> </h5>
             
+            <?php the_post_thumbnail('large'); ?>
             <?php the_content(); ?>
             
         <?php endwhile;?>

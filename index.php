@@ -1,3 +1,4 @@
+
 <?php get_header(); ?>   
 
 
@@ -17,10 +18,10 @@
             
         <?php endwhile;?>
         <?php endif; ?>
-            </div>
+            </div><!--end #content-->
 <!-------end #content------>
 
-<?php get_sidebar('blog'); ?>
+<?php get_sidebar(); ?>
 
 <small>index.php</small>
 <!--------------#CTAs-------------->
@@ -43,7 +44,7 @@
      
      <?php endwhile; ?><!--end loop 2-->
      
-</div>
+</div><!--end #cta3-->
 <!-----end #cta3----->
     
  <!------#cta4------>
