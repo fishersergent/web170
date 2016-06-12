@@ -27,6 +27,7 @@ register_sidebars(array(
 ));
 //
 
+
 //get_my_title_tag function for SEO
 
 function get_my_title_tag() {
@@ -53,7 +54,7 @@ function get_my_title_tag() {
     echo ' | ';
     echo 'Seattle, WA ';  
 }
-
+//
 
 //add page excerpt support for wordpress
 	add_post_type_support( 'page', 'excerpt' );
