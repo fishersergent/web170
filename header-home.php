@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="UTF-8">
     <!-- Begin Meta -->
-<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0" />
+    <meta name="description" content="<?php echo get_the_excerpt(); ?>" />
 <!-- End Meta -->
-<title><?php bloginfo('description'); ?></title>
+    <title><?php get_my_title_tag(); ?></title>
     <link href="css/style.css" rel="stylesheet" type="text/css" />
     <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/media.css"  type="text/css" />
     <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>" type="text/css" media="all" />
