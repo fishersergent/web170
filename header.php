@@ -1,17 +1,17 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="UTF-8">
     <!-- Begin Meta -->
-<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0" />
+    <meta name="description" content="<?php echo get_the_excerpt(); ?>" />
 <!-- End Meta -->
-<title><?php bloginfo('description'); ?></title>
-    <link href="css/style.css" rel="stylesheet" type="text/css" />
+<title><?php get_my_title_tag(); ?></title>
     
+    <link href="css/style.css" rel="stylesheet" type="text/css" />
     <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/media.css"  type="text/css" media="all" />
     <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>" type="text/css" media="all" />
  
-    
     <link href='https://fonts.googleapis.com/css?family=Overlock:400,700' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/blueberry.css" type="text/css" />
         
@@ -35,7 +35,7 @@ $(window).load(function() {
     <div id="page">
     <div id="header">
          <div id="logo">
-                 <a href="front-page.php"><!--this link needs to be fixed-->
+                 <a href="<?php echo get_settings('home'); ?>"><!--this link needs to be fixed-->
                      <img class="logo" src="<?php bloginfo('template_directory'); ?>/images/logo-sm.png" alt="logo"></a>
             </div><!--end #logo-->
         
