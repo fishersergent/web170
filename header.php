@@ -35,7 +35,7 @@ $(window).load(function() {
     <div id="page">
     <div id="header">
          <div id="logo">
-                 <a href="<?php echo get_settings('home'); ?>"><!--this link needs to be fixed-->
+                 <a href="front-page.php"><!--this link needs to be fixed-->
                      <img class="logo" src="<?php bloginfo('template_directory'); ?>/images/logo-sm.png" alt="logo"></a>
             </div><!--end #logo-->
         
